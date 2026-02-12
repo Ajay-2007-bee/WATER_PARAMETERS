@@ -1,110 +1,102 @@
-#MINI PROJECT#
-Water Quality Prediction using Geospatial Data
-Overview
+# MINI PROJECT — Water Quality Prediction using Geospatial Data
 
-This project predicts important water quality parameters using geospatial satellite data, weather information, and machine learning. The system integrates Google Earth Engine data with historical pond measurements to train predictive models that estimate water conditions for any given location and date.
+## Overview
 
-The goal of this project is to demonstrate how environmental data, satellite imagery, and AI models can be combined to support smart monitoring of water bodies.
+This project predicts important water quality parameters using geospatial satellite data, weather information, and machine learning.
 
-Features
+The system integrates Google Earth Engine data with historical pond measurements to train predictive models that estimate water conditions for any given location and date.
 
-Satellite feature extraction (NDVI & NDWI)
+The goal of this project is to demonstrate how environmental data, satellite imagery, and AI models can support smart monitoring of water bodies.
 
-Weather data integration
+---
 
-Automated data fusion pipeline
+## Features
 
-Machine learning model training using CatBoost
+* Satellite feature extraction (NDVI & NDWI)
+* Weather data integration
+* Automated data fusion pipeline
+* Machine learning model training using CatBoost
+* Multi-parameter water quality prediction:
 
-Multi-parameter water quality prediction:
+  * pH
+  * Ammonia
+  * Dissolved Oxygen
+  * Chlorophyll
+* Interactive prediction application
 
-pH
+---
 
-Ammonia
+## Project Structure
 
-Dissolved Oxygen
-
-Chlorophyll
-
-Interactive prediction application
-
-Project Structure
-
-data_preprocessing.py
+**data_preprocessing.py**
 Cleans and prepares the raw dataset.
 
-gee_data_fetcher.py
+**gee_data_fetcher.py**
 Fetches satellite and weather data using Google Earth Engine.
 
-data_fusion_pipeline.py
+**data_fusion_pipeline.py**
 Merges environmental data into a training-ready dataset.
 
-model_training.py
+**model_training.py**
 Trains and saves predictive models.
 
-runtime_setup.py / setup_environment.py
+**runtime_setup.py / setup_environment.py**
 Initializes environment and Earth Engine authentication.
 
-prediction_app.py
+**prediction_app.py**
 Interactive prediction tool for new coordinates.
 
-Technologies Used
+---
 
-Python
+## Technologies Used
 
-Google Earth Engine API
+* Python
+* Google Earth Engine API
+* Pandas and NumPy
+* CatBoost Machine Learning
+* Geospatial satellite datasets
 
-Pandas & NumPy
+---
 
-CatBoost Machine Learning
+## Workflow
 
-Geospatial satellite datasets
+1. Prepare and clean tabular pond data
+2. Retrieve satellite and temperature data
+3. Merge datasets into a unified feature set
+4. Train predictive models
+5. Generate water quality predictions for new inputs
 
-Workflow
+---
 
-Prepare and clean tabular pond data.
+## How to Run
 
-Retrieve satellite and temperature data.
+### Step 1 — Setup Environment
 
-Merge datasets into a unified feature set.
-
-Train predictive models.
-
-Generate water quality predictions for new inputs.
-
-How to Run
-Step 1 — Setup
-
-Run environment setup script:
-
+```
 python setup_environment.py
+```
 
-Step 2 — Prepare Data
+### Step 2 — Prepare Data
 
+```
 python data_preprocessing.py
+```
 
-Step 3 — Fetch & Merge Data
+### Step 3 — Fetch and Merge Data
 
+```
 python data_fusion_pipeline.py
+```
 
-Step 4 — Train Models
+### Step 4 — Train Models
 
+```
 python model_training.py
+```
 
-Step 5 — Run Prediction
+### Step 5 — Run Prediction Application
 
+```
 python prediction_app.py
-
-Applications
-
-Environmental monitoring
-
-Smart aquaculture management
-
-Remote sensing research
-
-Water quality analysis
-
-Educational Purpose
-
-This project is developed as an academic mini-project to demonstrate practical integration of geospatial analytics and machine learning.
+```
+e only.
